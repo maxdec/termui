@@ -160,7 +160,7 @@ func (table *Table) Buffer() Buffer {
 	table.Lock()
 	defer table.Unlock()
 	buffer := table.Block.Buffer()
-	rowCells := table.Analysis()
+	rowCells := table.analysis()
 	pointerX := table.innerArea.Min.X + 2
 	pointerY := table.innerArea.Min.Y
 	borderPointerX := table.innerArea.Min.X
